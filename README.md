@@ -1,5 +1,5 @@
 # Ex.08 Design of Interactive Image Gallery
-## Date:
+## Date:06.10.2025
 
 ## AIM:
 To design a web application for an inteactive image gallery with minimum five images.
@@ -25,8 +25,50 @@ Validate the HTML and CSS code.
 Publish the website in the given URL.
 
 ## PROGRAM :
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multiple Images Enlarge on Click</title>
+<style>
+  .clickable-image {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .enlarged {
+    transform: scale(2);
+    z-index: 10;
+    position: relative;
+  }
+</style>
+</head>
+<body>
 
+<img class="clickable-image" src="https://simplyphoolish.com/cdn/shop/files/posy-of-tulips-41219933700416_1024x1024.jpg?v=1689759524" alt="Image 1" />
+<img class="clickable-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQttbp8KaBhRGBC6_G9OjTma6xs2nQq3mWQ&s" alt="Image 2" />
+<img class="clickable-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRROqHOZrGXpSjNps9K2c5ScLEEyGnKvmwhpw&s" alt="Image 3" />
+<img class="clickable-image" src="https://img.freepik.com/free-photo/closeup-shot-red-rose-with-dew-top-black_181624-28079.jpg?semt=ais_hybrid&w=740&q=80" alt="Image 4" />
+
+<script>
+  const images = document.querySelectorAll('.clickable-image');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      img.classList.toggle('enlarged');
+    });
+  });
+</script>
+
+</body>
+</html>
+```
 ## OUTPUT:
+<img width="1904" height="915" alt="Screenshot 2025-10-06 102505" src="https://github.com/user-attachments/assets/ce7ca32b-ae18-49d5-9f2a-6f21741cea9c" />
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
